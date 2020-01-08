@@ -1,0 +1,11 @@
+server:
+  port: 8082
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/springboot_oauth2?useUnicode=true&characterEncoding=UTF-8&useOldAliasMetadataBehavior=true&autoReconnect=true&serverTimezone=UTC
+    username: root
+    password: 981214
+    # automatic create database,if this database non-existent
+    initialization-mode: ALWAYS
+    schema: classpath:database.sql

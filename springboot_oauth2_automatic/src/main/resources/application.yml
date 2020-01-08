@@ -1,0 +1,39 @@
+# 日志
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG
+
+# security-oauth2配置
+security:
+  oauth2:
+    # 客户端配置
+    client:
+      # 客户端回调地址
+      registered-redirect-uri: http://example.com
+      # 客户端id
+      client-id: oauth
+      # 客户端密钥
+      client-secret: oauth
+      # 授权范围
+      scope: all
+      # token有效期
+      access-token-validity-seconds: 43200
+      # 刷新token有效期
+      refresh-token-validity-seconds: 43200
+      # 允许类型
+      grant-type: authorization_code,password
+      # 可以访问的资源
+      resourse-ids: oauth2
+
+    # 资源服务器配置
+    resource:
+      # 资源id
+      id: oauth2
+
+    # 授权服务器配置
+    authorization:
+      # 允许check-token端点
+      check-token-access: isAuthenticated
+

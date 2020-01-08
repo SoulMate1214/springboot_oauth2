@@ -1,0 +1,7 @@
+server:
+  port: 8083
+
+# if your redis have password,write here
+#spring:
+#  redis:
+#    password:
